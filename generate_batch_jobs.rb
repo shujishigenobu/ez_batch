@@ -8,7 +8,10 @@ end
 
 template = File.open(templatef).read
 
-log = {"template" => templatef, "date" => Time.now, "jobs" => []}
+log = {"template" => templatef,
+       "definition_file" => definition_file,
+       "date" => Time.now,
+       "jobs" => []}
 n = 0
 keywords = []
 File.open(definition_file).each_with_index do |l, i|
